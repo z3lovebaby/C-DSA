@@ -1,0 +1,19 @@
+#include<stdio.h>
+int int main()
+{
+  double p;
+  printf("Nhap vao toa do:");
+  scanf("%lf",&p);
+  if (p>=0 && p<=360){
+    if (p>=0&&p<90){
+      printf("North %lf East\n",p);
+    }else if (p<180){
+      printf("North %lf West",180-p);
+    }else if(p<270){
+      printf("South %lf West",p-180);
+    }else{
+      printf("South %lf East",360-p);
+    }
+  }
+  return 0;
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+  double f;
+  long int m;
+  char name[26];
+  printf("Ten cua ban: ");
+  scanf(" %[^\n]",name);
+  printf("Nhap vao lai suat theo nam: ");
+  scanf("%lf",&f);
+  printf("So tien gui: ");
+  scanf("%ld"&m);
+  printf("%-12s%-12s%-12s\n","Thang","Lai","Tong");
+  
+  return 0;
+}

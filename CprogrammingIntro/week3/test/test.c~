@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+  printf("%12s\n","Menu");
+  printf("%s%8s%10s\n","Code","Name","Price");
+  printf("%4d%7s%14.2f\n",1,"Aaa",45000.0);
+  printf("%4d%7s%14.2f\n",2,"Bbb",12500.0);
+
+
+
+
+}

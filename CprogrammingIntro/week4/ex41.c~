@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+  int a;
+  float b;
+  printf("Nhap vao so nguyen he OCT:");
+  scanf("%x",&a);
+  printf("Nhap vao so thuc:");
+  scanf("%f",&b);
+  printf("So nguyen da nhap: %d\t So thuc %.2f\n",a,b);
+  return 0;
+
+
+}

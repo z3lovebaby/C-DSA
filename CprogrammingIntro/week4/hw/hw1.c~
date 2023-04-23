@@ -1,0 +1,23 @@
+#include<stdio.h>
+#define Prog "HESPI"
+#define Prom 53
+int main(){
+  char name[24],status[20];
+  int dd,mm,yy;
+  printf(" Input Student Name: ");
+  scanf(" %[^\n]", name);
+  printf(" Input Status (Absent/Late): ");
+  scanf(" %s",status);
+  printf("Input day,month,year (dd/mm/yy): ");
+  scanf(" %d%*c%d%*c%d",&dd,&mm,&yy);
+  ///////Output theo form///
+  char s[]="********************";
+  printf("\t%s%s%s\n",s,s,s);
+  printf("\t*%18s\t*\t%-20s*\n","Student Name",name); //1/t=5
+  return 0;
+  
+
+
+
+
+}

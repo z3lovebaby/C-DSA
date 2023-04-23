@@ -1,0 +1,32 @@
+#include<stdio.h>
+#define maxSize 15
+int maxArr(int a,int b){
+  if (a>b) return a;
+  else return b;
+}
+int main(){
+  int a[maxSize];
+  int i,count,max;
+  count=0;
+  max=0;
+  for (i=0;i<maxSize;i++){
+    printf("So thu %d: ",i+1);
+    scanf("%d",a[i]);
+  }
+  ///
+  for (i=0;i<maxSize;i++){
+    printf("%d ",a[i]);
+  }
+  for (i=0;i<maxSize;i++){
+  if (a[i]==0){
+		count++;}else{
+    max =maxArr(max,count);
+    count=0;
+  }
+  }
+  printf("There are %d nums 0 in this arr\n",count); 
+  ///////b
+  printf("Max length of the subsequence consecutive numbers: %d \n",max);
+  int check[max];
+  return 0;
+}

@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+  int month;
+  printf("Nhap vao thang: ");
+  scanf("%d",&month);
+  switch(month){
+  case:
+
+
+  }
+
+  
+  return 0;
+}

@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main() {
+  printf("Nguyen Hop Phu \n");
+  printf("Nguyen Hop Phu 1 \n");
+  printf("Nguyen Hop Phu 2 \n");
+  return 0;
+}

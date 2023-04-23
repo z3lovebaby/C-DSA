@@ -1,0 +1,32 @@
+#include<stdio.h>
+#define maxSize 5
+int sumArr(int a[]){
+  int sum=0;
+  int *ptr=a;
+  for (int i=0;i<maxSize;i++){
+    printf("a[%d] = ",i);
+    scanf("%d",ptr+i);
+  }
+  for (int i=0;i<maxSize;i++){
+    sum+=*(ptr+i);
+    printf("a[%d] = %d\t",i,*(ptr+i));
+  }
+  printf("Sum: %d\n",sum);
+}
+/*void AddArr(int a[]){
+  int *ptr=a;
+  for (int i=0;i<maxSize;i++){
+
+
+  }
+  for (int i=0;i<maxSize;i++){
+    printf("a[%d] = %d\t",i,*(ptr+i));
+  }
+  }*/
+int main(){
+  int a[maxSize];
+  printf("\n");
+  sumArr(a);
+  printf("\n");
+  return 0;
+}

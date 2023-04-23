@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+  double a,b;
+  char op;
+  printf("Input operator ( +,-,*,/): ");
+  scanf("%c",&op);
+  switch (op){
+  case '+':
+    printf("%.1lf + %.1lf = %.1lf\n",a,b,a+b);
+    break;
+  case '-':
+    printf("%.1lf - %.1lf = %.1lf\n",a,b,a-b);
+    break;
+  case '*':
+    printf("%.1lf * %.1lf = %.1lf\n",a,b,a*b);
+    break;
+  case '/':
+    printf("%.1lf / %.1lf = %.1lf\n",a,b,a/b);
+    break;
+  default:
+    printf("Error!!\n");
+  }
+  return 0;
+}

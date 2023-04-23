@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+  int a,b,c;
+  int *ptr;
+  printf("a b c: ");
+  scanf("%d %d %d",&a,&b,&c);
+  ptr=&a;
+  printf("a = %d , address: %d\n",a,ptr);
+  return 0;
+}

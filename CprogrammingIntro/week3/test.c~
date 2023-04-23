@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+  printf("a=%c",206);
+  return 0;
+
+
+
+}

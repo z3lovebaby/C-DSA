@@ -1,0 +1,8 @@
+#include<stdio.h>
+main(){
+  int sum; /* variable declaraton; sum is a variable hold the sum of the integer*/
+  sum=75+25;
+  printf("The sum of 75 and 25 is %d\n",sum);
+  return 0;
+
+}

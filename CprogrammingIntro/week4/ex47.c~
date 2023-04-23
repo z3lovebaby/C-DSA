@@ -1,0 +1,22 @@
+#include<stdio.h>;
+#define NAME "BK Bookseller"
+#define VAT 4
+int main(){
+  int Qty;
+  float Price,Total;
+  char s[13];
+  printf("Input Qty: ");
+  scanf("%d",&Qty);
+  printf("Input ISBN: ");
+  scanf("%s",s);
+  printf("Title: ");
+  scanf("%[^\n]*c",title);
+  printf("Price: ");
+  scanf("%f",Price);
+  Total=Qty*Price;
+  /////////////////////
+  printf("\t%s\n\n",NAME);
+  printf("\tQty\tISBN\t\tTitle\t\t\t Price\tTotal\n");
+  
+
+}

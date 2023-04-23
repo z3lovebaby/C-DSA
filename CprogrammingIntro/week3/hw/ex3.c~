@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main(){
+  char s[]="____________________";
+  char c='|';
+  char a='/';
+  char b[]="___________________";
+  printf("%s%s%s%s\n",s,s,s,s);
+  printf("%-80c%c\n",c,c);
+  printf("%-80c%c\n",c,c);
+  printf("%-8c%-50s%-22s%c\n",c,"TRUONG DAI HOC BACH KHOA HA NOI","THE SINH VIEN",c);
+  printf("%-8c%-50s%-22s%c\n",c,"HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY","Student ID card",c);
+  printf("%-80c%c\n",c,c);
+  printf("%-5c%s%s%s%-15s%c\n",c,s,s,s,"___________",c);
+  printf("%-5c%s%c%-68s%c\n",c,"Ho ten",a," Name",c);
+  printf("%-5c%-75s%c\n",c,"NGUYEN NGOC DANG",c);
+  printf("%-80c%c\n",c,c);
+  printf("%-5c%s%c%-65s%c\n",c,"Ngay sinh",a," Date of Birth",c);
+  printf("%-5c%d%c%d%c%-70d%c\n",c,27,a,01,a,2002,c);
+  printf("%-80c%c\n",c,c);
+  printf("%-5c%-75s%c\n",c,"ICT-02 K65(IT E7)",c);
+  printf("%-80c%c\n",c,c);
+  printf("%-80c%c\n",c,c);
+  printf("%-5c%c%-2c%-2c%c%c%-2c%c%-2c%-2c%c%c%c%-2c%c%-2c%c%c%-2c%-49c%c\n",c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c);
+  printf("%-5c%c%-2c%-2c%c%c%-2c%c%-2c%-2c%c%c%c%-2c%c%-2c%c%c%-2c%-49c%c\n",c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c);
+  printf("%-5c%c%-2c%-2c%c%c%-2c%c%-2c%-2c%c%c%c%-2c%c%-2c%c%c%-2c%-49c%c\n",c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c);
+  printf("%-5c%s%c%-48s%s%c%-10s%c\n",c,"Gia tri den",a,"Valid Thru","MSSV",a,"ID No",c);
+  printf("%-5c%d%c%d%c%-55d%-15d%c\n",c,30,a,07,a,2024,  20200149  ,c);
+  printf("%-80c%c\n",c,c);
+  printf("%c%s%s%s%s%c\n",c,s,s,s,b,c);
+  return 0;
+}

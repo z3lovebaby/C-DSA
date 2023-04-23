@@ -1,0 +1,16 @@
+#include<stdio.h>
+long salary(int h_work){
+  if (h_work>40) return 15000*40+1.5*15000*(h_work-40);
+  else return 15000*h_work;
+}
+int main(){
+  int n;
+  do{
+    printf("Nhap vao so gio lam, h:");
+    scanf("%d",&n);
+    if (n<10 || n>=65) printf("So gio lam sai quy dinh, 10<=h<65");
+  }
+  while (n<10 || n>=65);
+    printf("Luong ban nhan duoc: %ld\n",salary(n));
+  return 0;
+}

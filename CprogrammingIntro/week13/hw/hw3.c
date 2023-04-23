@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#define maxL 500
+//
+void encrypted(char *text,int *n){
+  int i,temp;
+  i=0;
+  while (*n>26){
+    *n-=26;
+  }
+  while (*(text+i)!='\0'){
+    if (islower(*(text+i))){
+      temp=*(text+i)-'a';
+      temp=(temp+*n)%26;
+      *(text+i)=temp+'a';
+    }
+    if (isupper(*(text+i))){
+      temp=*(text+i)-'A';
+      temp=(temp+*n)%26;
+      *(text+i)=temp+'A';
+    }
+    i++;
+  }
+}
+//
+int main(){
+  char text[maxL];
+  int ch,n;
+  do{
+    printf("\t\tENCRYPTED PROGRAM\n");
+    printf("\tLowercase rotates in lowercase, uppercase rotates in uppercase.\n");
+    printf("\t1. Input.\n");
+    printf("\t2. Encoding\n");
+    printf("\t3. Decoding.\n");
+    printf("\t4. Exist.\n");
+    printf("\tYour choice: ");
+    scanf("%d%*c",&ch);
+    //
+    switch(ch){
+    case 1:
+      printf("Your text:\n");
+      scanf("%[^\n]%*c",text);
+      do{
+	printf("k = ");
+	scanf("%d%*c",&n);
+	if (n<0){
+	  printf("k must >0 !!\nRe-enter!\n");
+	}
+      }while(n<0);
+
+      printf("\t\t======-Press ENTER to Continue-======");
+      while( getchar() != '\n' );
+      break;
+    case 2:
+      if (n<0){
+	n=-n;
+      }
+      printf("Before encode:\n%s\n",text);
+      encrypted(text,&n);
+      printf("After encode:\n%s\n",text);
+      printf("\t\t======-Press ENTER to back menu-======");
+      while( getchar() != '\n' );
+      break;
+    case 3:
+      if (n>0){
+	n=-n;
+      }
+      printf("Text was encoded:\n%s\n",text);
+      encrypted(text,&n);
+      printf("After decoding:\n%s\n",text);
+      printf("\t\t======-Press ENTER to back menu-======");
+      while( getchar() != '\n' );
+      break;
+    case 4:
+      printf("Thank youuu!\n");
+      printf("\t\t======-Press ENTER to Exist-======");
+      while( getchar() != '\n' );
+      break;
+    default:
+      printf("Your choice is errror!!\n");
+      printf("Let try againn!\n");
+      printf("\t\t======-Press ENTER to Continue-======");
+      while( getchar() != '\n' );
+      break;
+    }//end switch
+  }while(ch!=4);
+  return 0;
+}

@@ -1,0 +1,74 @@
+#include<stdio.h>
+typedef struct
+{
+  int id;
+  char name[31];
+  float grade;
+  char class;
+}student;
+void getdata(student *st, int i){
+  st->id=i;
+  printf("Student %d, Your name: ",i+1);
+  scanf("%[^\n]%*c",st->name);
+  do{
+    printf("Your grade: ");
+    scanf("%f%*c",&st->grade);
+    if(st->grade<0){
+      printf("False\n");
+    }
+  }while(st->grade<0);
+  if(st->grade<=10&&st->grade>=9){
+    st->class='A';
+  }else if(st->grade>=7.5){
+    st->class='B';
+  }else if (st->grade>=6.5){
+    st->class='C';
+  }else{
+    st->class=' ';
+  }
+}
+int main(){
+  int ch,numst,i;
+  student st[10],temp;
+  do{
+    printf("1. Input data.\n");
+    printf("2. List student.\n");
+    printf("Your choice: ");
+    scanf("%d%*c",&ch);
+    switch(ch){
+    case 1:
+      printf("So hoc sinh: ");
+      scanf("%d%*c",&numst);
+      for (i=0;i<numst;i++){
+	getdata(&st[i],i);
+      }
+      break;
+    case 2:
+      //sort
+      for(int i = 0; i < numst - 1; i++){
+	for(int j = i + 1; j < numst; j++){
+	  if(st[i].grade < st[j].grade){
+	    // Hoan vi 2 so a[i] va a[j]
+	    temp = st[i];
+	    st[i] = st[j];
+	    st[j] = temp;
+	  }
+	}
+      }
+      printf("========================================================\n");
+      printf("|    Id    |           Name          |   Grade  |  Class       |\n");
+      for(i=0;i<numst;i++){
+	printf("|%5d     |%20s     |%.2f  %5c        |\n",st[i].id,st[i].name,st[i].grade,st[i].class);
+      }
+      printf("Thank you ! See you again!\n");
+      printf("\t\t======-Press ENTER to Exist-======");
+      while( getchar() != '\n' );
+      break;
+    default:
+      printf("Your choice is not correct !\n Press Enter to try again!\n");
+      printf("\t\t======-Press ENTER to Exist-======");
+      while( getchar() != '\n' );
+    }
+  }while(ch!=2);
+  return 0;
+}

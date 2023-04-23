@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main(){
+  do{
+    printf("Nhap vao so nguyen duong n: ");
+    scanf("%d",&d);
+  }while (n<=0)
+
+
+}

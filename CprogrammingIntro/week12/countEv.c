@@ -1,0 +1,22 @@
+#include<stdio.h>
+#define maxSize 5
+void getArr(int* a){
+  int i=0;
+  for (i=0;i<maxSize;i++){
+    printf("a[%d] = ",i);
+    scanf("%d",a+i);
+  }
+}
+int countEv(int* a){
+  int i,count=0;
+  for (i=0;i<maxSize;i++){
+    if (*(a+i)%2==0) count++;
+  }
+  return count;
+}
+int main(){
+  int a[maxSize];
+  getArr(&a);
+  printf("MNum even element: %d\n",countEv(&a));
+  return 0;
+}

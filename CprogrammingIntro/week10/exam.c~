@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define MONTHS 12
+int main(){
+  int rainfall[MONTHS];
+  int i;
+  for (i=0;i<MONTHS;i++){
+    printf("Enter rainfall %d",i);
+    scanf("%d",&a[i]);
+  }
+  for (i=0;i<MONTHS;i++){
+    printf("%5d",a[i]);
+  }
+  printf("\n");
+  return 0;
+}

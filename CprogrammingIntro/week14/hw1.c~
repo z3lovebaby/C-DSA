@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdlib.h>
+#define maxL 30
+int checkValidnumPlate(char s[]);
+int main(){
+  int ch;
+  char s[maxL];
+  do{
+    printf("CHECKING VALID NUMBER PLATE\n");
+    printf("1. Input and check!\n");
+    printf("2. Exist.\n");
+    printf("Your choice: ");
+    scanf("%d%*c",&ch);
+    switch(ch){
+    case 1:
+      printf("Your number plate:");
+      scanf("%[^\n]%*c",s);
+      if(checkValidnumPlate(s)){
+	printf("True !\n");
+      }else printf("False !\n");
+      break;
+    case 2:
+      printf("Thank you ! See you again!\n");
+      break;
+    default:
+      printf("Your choice is not correct !\n Press Enter to try again!\n");
+
+    }
+  }while(ch!=2);
+  return 0;
+}
+///
+//////
+////////
+int checkValidnumPlate(char s[]){
+  int temp[4]={29,30,31,32};
+  char *to;
+  int i,check,count=1;
+  if (strlen(s)!=11) return 0;
+  to=strndup(s,2);
+  check=atoi(to);
+  for (i=0;i<4;i++){
+    if (check==temp[i]) count--;
+  }
+  printf("%d\n",count);
+  if (count) return 0;
+  if (s[2]!='-'||s[8]!='.') return 0;
+  if (!(isalpha(s[3]))) return 0;
+  for (i=4;i<11;i++){
+    if (i!=8){
+      if (!(isdigit(s[i]))) return 0;
+    }
+  }
+
+  return 1;
+}

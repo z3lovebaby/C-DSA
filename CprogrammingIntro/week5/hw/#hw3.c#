@@ -1,0 +1,40 @@
+#include<stdio.h>
+#define tulanh 8
+#define tv 15
+#define lap 12
+int main(){
+  int n1,n2,n3,DTtulanh,DTtv,DTlap;
+  printf("Nhap vao so luong tu lanh Electrolux da ban: ");
+  scanf("%d",&n1);
+  printf("Nhap vao so luong TV LCD Sony da ban: ");
+  scanf("%d",&n2);
+  printf("Nhap vao so luong Laptop HP da ban: ");
+  scanf("%d",&n3);
+  DTtulanh=n1*tulanh;
+  DTtv=n2*tv;
+  DTlap=n3*lap;
+  char str[]="**********";
+  char etr[]="__________";
+  char tb[100];
+  printf("_%s%s%s%s%s%s%s_\n",etr,etr,etr,etr,etr,etr,etr);
+  printf("*%s%s%s%s%s%s%s*\n",str,str,str,str,str,str,str);
+  printf("%-22c%s%22c\n",'*',"VIETLONG - THONG KE SAN PHAM",'*');
+  printf("*%s%s%s%s%s%s%s*\n",etr,etr,etr,etr,etr,etr,etr);
+  printf("*%s%s%s%s%s%s%s*\n",str,str,str,str,str,str,str);
+  printf("%-7c%-19s%-5c%-9s%-4c%-9s%-8c%-10s%c\n",'*',"TEN SAN PHAM",'*',"PRICE",'*',"NUMBER",'*',"SUM",'*');
+  printf("%-7c%-19s%-5c%-3d%-6s%-6c%-7d%-8c%-5d%-5s%c\n",'*',"Tu lanh Electrolux",'*',tulanh,"mVND",'*',n1,'*',DTtulanh,"mVND",'*');
+  printf("%-7c%-19s%-5c%-3d%-6s%-6c%-7d%-8c%-5d%-5s%c\n",'*',"TV LCD Sony",'*',tv,"mVND",'*',n2,'*',DTtv,"mVND",'*');
+  printf("%-7c%-19s%-5c%-3d%-6s%-6c%-7d%-8c%-5d%-5s%c\n",'*',"Laptop HP",'*',lap,"mVND",'*',n3,'*',DTlap,"mVND",'*');
+  printf("*%s%s%s%s%s%s%s*\n",etr,etr,etr,etr,etr,etr,etr);
+  printf("*%s%s%s%s%s%s%s*\n",str,str,str,str,str,str,str);
+  printf("%-71c%c\n",'*','*');
+  printf("%-7c%-19s%3d + %3d + %3d = %4d %-22s%c\n",'*',"TONG DOANH THU:",DTtulanh,DTtv,DTlap,DTtulanh+DTtv+DTlap,"mVND",'*');
+  printf("%-7c%-19s%46c\n",'*',"NHAN XET CHUNG:",'*');
+  printf("%-7c%-64s%c\n",'*',n1>=n2 && n1>=n3 ?"- Tu lanh Electrolux ban chay nhat":(n2>=n3? "- TV LCD Sony ban chay nhat":"- Laptop HP ban chay nhat") ,'*');
+  printf("%-7c%-64s%c\n",'*',n1<=n2 && n1<=n3 ?"- Tu lanh Electrolux ban e nhat":(n2<n3? "- TV LCD Sony ban e nhat":"- Laptop HP ban e nhat") ,'*');
+  printf("%-7c%-64s%c\n",'*',DTtulanh>=DTtv && DTtulanh>=DTlap ?"- Tu lanh Electrolux la mat hang co doanh so cao nhat":(DTtv>=DTlap? "- TV LCD Sony la mat hang co doanh so cao nhat":"- Laptop HP la mat hang co doanh so cao nhat") ,'*');
+  printf("%-7c%-64s%c\n",'*',DTtulanh<=DTtv && DTtulanh<=DTlap ?"- Tu lanh Electrolux la mat hang co doanh so thap nhat":(DTtv<=DTlap? "- TV LCD Sony la mat hang co doanh so thap nhat":"- Laptop HP la mat hang co doanh so thap nhat") ,'*');
+  printf("*%s%s%s%s%s%s%s*\n",etr,etr,etr,etr,etr,etr,etr);
+  printf("*%s%s%s%s%s%s%s*\n",str,str,str,str,str,str,str);
+  return 0;
+}

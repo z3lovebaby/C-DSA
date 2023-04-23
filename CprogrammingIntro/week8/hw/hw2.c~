@@ -1,0 +1,99 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+  int n,t=1;
+  double error;
+  char number;
+  printf("Welcome. I am a Calculator !!\n");
+  printf("Please type your  choice: \n");
+  printf("1.Input the positive number and the error that you want to execute \n");
+  printf("2.Find out SIN(n)\n");
+  printf("3.Find out square root of n\n");
+  printf("4.Find out e to the power of n\n");
+  printf("5.exit\n");
+  do{
+    printf("\nSo, your choice is:");
+    scanf("%d",&number);
+    switch(number){
+    case 1:
+      while(t!=0){
+
+	printf("The number you want to execute is : ");
+	scanf("%d%*c",&n);
+	printf("The error that you want when calculate is: ");
+	scanf("%lf%*c",&error);
+	if((n>=0)&&(error>=0)){
+	  break;}
+	else{
+	  printf("Your data is incorrect\nPlease type one more time again!!\n"); }
+
+      }
+      break;
+
+    case 2:
+      int a=0;
+      double sinn=0,taylor1;
+
+      while(fabs(sinn-sin(n))>error){
+	long int pow1=1,pow2=1,pow3=1;
+	int a1=0,a2=0,a3;
+	a3=2*a+1;
+	while(a1<(a)){
+	  pow1*=(-1);
+	  a1++;}
+	while(a2<(2*a+1)){
+	  pow2*=n;
+	  a2++;}
+	while(a3>0){
+	  pow3*=a3;
+	  a3--;}
+	taylor1=((float)pow1*pow2)/pow3;
+	sinn+=taylor1;
+	a++;
+      }
+      printf("The value of sin(n) is: %.2lf\n",sinn);
+      break;
+
+    case 3:;
+      int b=0;
+      double sroot=0,sroot0=n;
+      while(fabs(sqrt(n)-sroot)>error){
+	sroot=(sroot0+n/sroot0)/2;
+	sroot0=sroot;
+	b++;
+      }
+      printf("The value of square root of n is: %.2lf\n",sroot);
+      break;
+
+    case 4:
+      int c=0;
+      double ex=0,taylor2;
+      while(fabs(exp(n)-ex)>error){
+	int c1=0,c2=c;
+	unsigned long int pow1=1,pow2=1;
+	while(c1<c){
+	  pow1*=n;
+	  c1++;}
+	while(c2>0){
+	  pow2*=c2;
+	  c2--;}
+	taylor2=(float)pow1/pow2;
+	ex+=taylor2;
+	c++;
+      }
+      printf("The value of e to the power of n is: %.2lf\n",ex);
+      break;
+
+    case 5:
+      printf("Goodbye!!!\n");
+      break;
+
+    default:
+      printf("Your input is error!!");
+      break;
+    }
+
+
+  }while(number!=5);
+
+}

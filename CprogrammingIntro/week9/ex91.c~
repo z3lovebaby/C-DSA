@@ -1,0 +1,15 @@
+#include<stdio.h>
+double kine_E(m,v);
+int main(){
+  double m, v;
+  do {
+    printf("Enter mass:"); scanf("%f",&m);
+    printf("Enter speed:"); scanf("%f",&v);
+  } while (m<0 && v <=0);
+  printf("Kinetic Energy: %lf.2\n",kine_E(m,v));
+  return 0;
+}
+double kine_E(double m,double v){
+
+  return 1.0/2*m*v*v;
+}

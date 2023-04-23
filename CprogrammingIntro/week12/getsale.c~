@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define maxSize 5
+void getSale(int* a){
+  int i=0;
+  for (i=0;i<maxSize;i++){
+    printf("Enter sale figure for quater %d = ",i);
+    scanf("%d",a+i);
+  }
+}
+///
+
+int main(){
+  
+  return 0;
+}

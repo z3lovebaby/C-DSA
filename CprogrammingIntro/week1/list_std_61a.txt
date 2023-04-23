@@ -1,0 +1,38 @@
+Full name			ID no			Class
+------------------------------------------------------------------------------
+Mai Hoang Anh			20205142		ICT
+Mai Thi Ngoc Anh		20205143		ICT
+Doan Van Binh			20205145		ICT
+Dao Minh Chi			20200082		ICT
+Nguyen Ngoc Dang		20200149		ICT
+Nguyen Thanh Dat		20205178		ICT
+Nguyen Nhu Duc			20194747		ICT
+Dao Quang Duong			20194514		ICT
+Vu Hong Hai			20205150		ICT
+Ha Huy Hoang			20205152		ICT
+Lai The Hung			20205155		ICT-02
+Nguyen Viet Hung		20205157		ICT
+Nguyen Le Hung			20205156		ICT
+Dang Ngoc Huy			20200270		ICT
+Pham Van Khoa			20194595		ICT
+Nguyen Thi Lnh			20200349		ICT
+Vu Thuy Linh			20205159		ICT
+Bui Thanh Long			20205160		ICT
+Duong Duy Manh			20205162		ICT
+Pham Anh Minh			20194802		ICT
+Tran Quang Nam			20200427		ICT
+Nguyen Hop Phu			20205165		ICT
+Nguyen Minh Quan		20200508		ICT
+Nguyen Hoang Quan		20205166		ICT
+Nguyen Ngoc Quang		20205167		ICT
+Vu Hong Quang			20205192		ICT
+Nguyen Hai Son			20205168		ICT
+Nguyen Tien Thanh 		20205170		ICT
+Nguyen Van Tien 		20205195		ICT
+Vu Duc Toan			20205173		ICT
+Nguyen Mau Tra			20200624		ICT
+Nguyen Kieu Trang		20205174		ICT
+Nguyen Chi Trung		20200643		ICT
+Tran Quoc Trung			20200648		ICT
+Tran Minh Trương		20184211
+Nguyen Ba Tuan Viet		20194882

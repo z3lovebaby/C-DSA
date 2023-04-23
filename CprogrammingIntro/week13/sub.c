@@ -1,0 +1,52 @@
+// #include<stdio.h>
+// #include<string.h>
+// #define maxL 50
+// int main(){
+//     char a[5][maxL],b[maxL];
+//     int i,count,ch;
+//     do{
+//         printf("1. Nhap product\n");
+//         printf("2. Search.\n");
+//         printf("3. Thoat.\n");
+//         printf("Your choice:");
+//         scanf("%d%*c",&ch);
+//         switch(ch){
+//             case 1:
+//                 for (i=0;i<3;i++){
+//                 printf("Product %d:",i+1);
+//                 scanf("%[^\n]%*c",a[i]);
+//         }
+//         break;
+//         case 2:
+//             printf("Search:");
+//             scanf("%[^\n]%*c",b);
+//             for (i=0;i<3;i++){
+//             if(strstr(a[i],b)){
+//             printf("%s\n",a[i]);
+//         }
+//         }
+//         break;
+//         case 3:
+//         printf("Thank!\n");
+//         break;
+//         default:
+//         printf("Error!\n");
+//         break;
+//         }//end sw
+//     }while(ch!=3);
+
+//     return 0;
+// }
+#include<stdio.h>
+#include<string.h>
+#define maxL 50
+int main(){
+  char a[maxL]="123456789";
+  char *to;
+  to=strdup(a+2);
+  printf("String:%s\n",a);
+  printf("Strndum(a+2):%s\n",to);
+  to=strndup(a+2,3);
+  printf("Strndum(a+2):%s\n",to);
+  return 0;
+}

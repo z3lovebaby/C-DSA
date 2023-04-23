@@ -1,0 +1,804 @@
+ ~  cd CprogrammingIntro/week4
+cd CprogrammingIntro/week4
+ ~/CprogrammingIntro/week4  mkdir hw
+mkdir hw
+ ~/CprogrammingIntro/week4  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+gcc: error: hw1.c: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+ ~/CprogrammingIntro/week4  cd hw
+cd hw
+ ~/CprogrammingIntro/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+hw1.c: In function ‘main’:
+hw1.c:12:12: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
+   12 |   scanf(" %d%*c%d%*c%d",dd,mm,yy);
+      |           ~^            ~~
+      |            |            |
+      |            int *        int
+hw1.c:12:17: warning: format ‘%d’ expects argument of type ‘int *’, but argument 3 has type ‘int’ [-Wformat=]
+   12 |   scanf(" %d%*c%d%*c%d",dd,mm,yy);
+      |                ~^          ~~
+      |                 |          |
+      |                 int *      int
+hw1.c:12:22: warning: format ‘%d’ expects argument of type ‘int *’, but argument 4 has type ‘int’ [-Wformat=]
+   12 |   scanf(" %d%*c%d%*c%d",dd,mm,yy);
+      |                     ~^        ~~
+      |                      |        |
+      |                      int *    int
+ ~/CprogrammingIntro/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/CprogrammingIntro/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 24/01/2002
+24/01/2002
+Name:Nguyen Hop Phu	Stt:Late	 At:24/1/2002
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/CprogrammingIntro/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/12/2002
+22/12/2002
+Name:Nguyen Hop Phu	Stt:Late	 At:22/12/2002
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+hw1.c: In function ‘main’:
+hw1.c:14:10: warning: initialization of ‘char’ from ‘char *’ makes integer from pointer without a cast [-Wint-conversion]
+   14 |   char s="********************";
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+hw1.c:15:12: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+   15 |   printf("%s%s%s%s\n",s,s,s,s);
+      |           ~^          ~
+      |            |          |
+      |            char *     int
+      |           %d
+hw1.c:15:14: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘int’ [-Wformat=]
+   15 |   printf("%s%s%s%s\n",s,s,s,s);
+      |             ~^          ~
+      |              |          |
+      |              char *     int
+      |             %d
+hw1.c:15:16: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘int’ [-Wformat=]
+   15 |   printf("%s%s%s%s\n",s,s,s,s);
+      |               ~^          ~
+      |                |          |
+      |                char *     int
+      |               %d
+hw1.c:15:18: warning: format ‘%s’ expects argument of type ‘char *’, but argument 5 has type ‘int’ [-Wformat=]
+   15 |   printf("%s%s%s%s\n",s,s,s,s);
+      |                 ~^          ~
+      |                  |          |
+      |                  char *     int
+      |                 %d
+ ~/CprogrammingIntro/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/CprogrammingIntro/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/12/2002
+22/12/2002
+********************************************************************************
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/12/2002
+22/12/2002
+************************************************************
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/12/2222
+22/12/2222
+************************************************************
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/12/2222
+22/12/2222
+	************************************************************
+	*Student Name       Nguyen Hop Phu *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  Nguyen Hop Phu
+Nguyen Hop Phu
+zsh: command not found: Nguyen
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/12/2222
+22/12/2222
+	************************************************************
+	*Student Name       Nguyen Hop Phu *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/12/1111
+22/12/1111
+	************************************************************
+	*        Student Name 		Nguyen Hop Phu *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): late
+late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+	************************************************************
+	*      Student Name 		Nguyen Hop Phu       *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phugcc
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+	************************************************************
+	*      Student Name 		Nguyen Hop Phu       *
+ ~/C/week4/hw  
+
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+	************************************************************
+	*      Student Name	*	Nguyen Hop Phu      *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+hw1.c: In function ‘main’:
+hw1.c:16:31: warning: unknown conversion type character ‘*’ in format [-Wformat=]
+   16 |   printf("\t*%18s\t*\t%-20s%14*\n","Student Name",name); //1/t=5 1+18+5+1+20
+      |                               ^
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+hw1.c: In function ‘main’:
+hw1.c:16:31: warning: unknown conversion type character ‘*’ in format [-Wformat=]
+   16 |   printf("\t*%18s\t*\t%-20s%14*\n","Student Name",name); //1/t=5 1+18+5+1+20
+      |                               ^
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+	************************************************************
+	*      Student Name	*	Nguyen Hop Phu                    *
+ ~/C/week4/hw  gcgcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+	************************************************************
+	*      Student Name	*	Nguyen Hop Phu                   *
+ ~/C/week4/hw  Nguyen Hop Phugcc
+Nguyen Hop Phugcc
+zsh: command not found: Nguyen
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+	************************************************************
+	*      Stgccudent Name	*	Nguyen Hop Phu               *
+ ~/C/week4/hw  	*      Stgccudent Name	*	Nguyen Hop Phu               *
+       *      Stgccudent Name
+Completing `file' or `corrections'
+ ~/C/week4/hw         *      Stgccudent Name*
+Completing `file' or `corrections'
+ ~/C/week4/hw         *      Stgccudent Name*Nguyen Hop Phu               *
+zsh: no matches found: Name*Nguyen
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+Nguyen Hop Phu
+	************************************************************
+	*      Student Name	*	Nguyen Hop Phu               *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Kate
+Kate
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+Nguyen Hop Phu
+	************************************************************
+	*      Student Name		Nguyen Hop Phu               *
+ ~/C/week4/hw  gcgcc -o hw1 hw1.c
+gcgcc -o hw1 hw1.c
+zsh: command not found: gcgcc
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phuu
+Nguyen Hop Phuu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+Nguyen Hop Phuu
+*	*	*
+	************************************************************
+	*      Student Name		Nguyen Hop Phuu   gcc           *
+ ~/C/week4/hw  	*      Student Name		Nguyen Hop Phuu   gcc           *
+       *      Student Name
+Completing `file' or `corrections'
+ ~/C/week4/hw         *      Student Name
+Completing `file' or `corrections'
+ ~/C/week4/hw         *      Student NameNguyen Hop Phuu   gcc           *
+zsh: command not found: hw1
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+Nguyen Hop Phu
+*	*	*
+	************************************************************
+	*      Student Name	*	Nguyen Hop Phu           *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+Nguyen Hop Phu
+*	*	*
+	************************************************************
+	*      Student Name	*	 Nguyen Hop Phu           *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phuuu
+Nguyen Hop Phuuu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/222
+22/22/222
+Nguyen Hop Phuuu
+*	*	*
+	************************************************************
+	*      Student Name	*	 Nguyen Hop Phuuu           *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Lte
+Lte
+Input day,month,year (dd/mm/yy): 22/22/2002
+22/22/2002
+Nguyen Hop Phu
+*	*	*
+	************************************************************
+	*      Student Name	*	 Nguyen Hop Phu            *
+ ~/C/week4/hw  gcc 0o hw1 hw1.c
+gcc 0o hw1 hw1.c
+gcc: error: 0o: No such file or directory
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+Nguyen Hop Phu
+*	*	*
+	************************************************************
+	*     Student Name:	*	 Nguyen Hop Phu            *
+	*          Program:	*	 HESPI                     *
+	*        Promotion:	*	 53                        *
+	*           Status:	*	 Late                      *
+	*               At:	*	 22                  /22/2222      *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phuuuu
+Nguyen Hop Phuuuu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/6/2002
+22/6/2002
+Nguyen Hop Phuuuu
+*	*	*
+	************************************************************
+	*     Student Name:	*	 Nguyen Hop Phuuuu         *
+	*          Program:	*	 HESPI                     *
+	*        Promotion:	*	 53                        *
+	*           Status:	*	 Late                      *
+	*               At:	*	 22                  /6/2002      *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+hw1.c: In function ‘main’:
+hw1.c:22:28: warning: unknown conversion type character ‘ ’ in format [-Wformat=]
+   22 |   printf("\t*%18s\t*\t %-20 2d/d/d%7c\n","At:",dd,mm,yy,'*');
+      |                            ^
+hw1.c:22:10: warning: too many arguments for format [-Wformat-extra-args]
+   22 |   printf("\t*%18s\t*\t %-20 2d/d/d%7c\n","At:",dd,mm,yy,'*');
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phuc
+Nguyen Hop Phuc
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2222
+22/22/2222
+Nguyen Hop Phuc
+*	*	*
+	************************************************************
+	*     Student Name:	*	 Nguyen Hop Phuc           *
+	*          Program:	*	 HESPI                     *
+	*        Promotion:	*	 53                        *
+	*           Status:	*	 Late                      *
+	*               At:	*	 22/22/2222      *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw
+./hw
+zsh: no such file or directory: ./hw
+ ~/C/week4/hw  1./hw1
+1./hw1
+zsh: no such file or directory: 1./hw1
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 2/22/2002
+2/22/2002
+Nguyen Hop Phu
+*	*	*
+	************************************************************
+	*     Student Name:	*	 Nguyen Hop Phu            *
+	*          Program:	*	 HESPI                     *
+	*        Promotion:	*	 53                        *
+	*           Status:	*	 Late                      *
+	*               At:	*	 2/22/2002		      *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+hw1.c: In function ‘main’:
+hw1.c:22:27: warning: unknown conversion type character ‘ ’ in format [-Wformat=]
+   22 |   printf("\t*%18s\t*\t %-2 2d/%-2 2d/%-2 0d\t\t%7c\n","At:",dd,mm,yy,'*');
+      |                           ^
+hw1.c:22:34: warning: unknown conversion type character ‘ ’ in format [-Wformat=]
+   22 |   printf("\t*%18s\t*\t %-2 2d/%-2 2d/%-2 0d\t\t%7c\n","At:",dd,mm,yy,'*');
+      |                                  ^
+hw1.c:22:41: warning: unknown conversion type character ‘ ’ in format [-Wformat=]
+   22 |   printf("\t*%18s\t*\t %-2 2d/%-2 2d/%-2 0d\t\t%7c\n","At:",dd,mm,yy,'*');
+      |                                         ^
+hw1.c:22:10: warning: too many arguments for format [-Wformat-extra-args]
+   22 |   printf("\t*%18s\t*\t %-2 2d/%-2 2d/%-2 0d\t\t%7c\n","At:",dd,mm,yy,'*');
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phu
+Nguyen Hop Phu
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 22/22/2202
+22/22/2202
+Nguyen Hop Phu
+*	*	*
+	************************************************************
+	*     Student Name:	*	 Nguyen Hop Phu            *
+	*          Program:	*	 HESPI                     *
+	*        Promotion:	*	 53                        *
+	*           Status:	*	 Late                      *
+	*               At:	*	 22/22/2202		      *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Ngoc Dang
+Nguyen Ngoc Dang
+ Input Status (Absent/Late): Absent
+Absent
+Input day,month,year (dd/mm/yy): 6/6/2002
+6/6/2002
+Nguyen Ngoc Dang
+*	*	*
+	************************************************************
+	*     Student Name:	*	 Nguyen Ngoc Dang          *
+	*          Program:	*	 HESPI                     *
+	*        Promotion:	*	 53                        *
+	*           Status:	*	 Absent                    *
+	*               At:	*	 6 /6 /2002		    *
+ ~/C/week4/hw  gcc -o hw1 hw1.c 
+gcc -o hw1 hw1.c 
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Hop Phuc
+Nguyen Hop Phuc
+ Input Status (Absent/Late): Late
+Late
+Input day,month,year (dd/mm/yy): 2/2/2002
+2/2/2002
+Nguyen Hop Phuc
+*	*	*
+	************************************************************
+	*     Student Name:	*	 Nguyen Hop Phuc           *
+	*          Program:	*	 HESPI                     *
+	*        Promotion:	*	 53                        *
+	*           Status:	*	 Late                      *
+	*               At:	*	 02/02/2002		   *
+ ~/C/week4/hw  gcc -o hw1 hw1.c
+gcc -o hw1 hw1.c
+ ~/C/week4/hw  ./hw1
+./hw1
+ Input Student Name: Nguyen Ngoc Dang
+Nguyen Ngoc Dang
+ Input Status (Absent/Late): Lat
+Lat
+Input day,month,year (dd/mm/yy): 22/6/2002
+22/6/2002
+Nguyen Ngoc Dang
+*	*	*
+	************************************************************
+	*     Student Name:	*	 Nguyen Ngoc Dang          *
+	*          Program:	*	 HESPI                     *
+	*        Promotion:	*	 53                        *
+	*           Status:	*	 Lat                       *
+	*               At:	*	 22/06/2002		   *
+	************************************************************
+ ~/C/week4/hw  gcc -o hw2 hw2.c
+gcc -o hw2 hw2.c
+ ~/C/week4/hw  ./hw2
+./hw2
+**************************************************************************
+|                                                                        |
+|         TRUONG DAI HOC BACH KHOA HA NOI           THE SINH VIEN        |
+|    HANOI UNIVERSITY OF SCIENCE AND TECHNOLOGY    STUDENT ID CARD       |
+|                                                                        |
+|   __________________________________________________________________   |
+|   Ho ten/ Name                                                         |
+|   NGUYEN HOP PHU                                                       |
+|                                                                        |
+|   Ngay sinh/ Date of Birth                                             |
+|   24/01/2002                                                           |
+|                                                                        |
+|   ICT 02-K65 (IT-E7)                                                   |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   Gia tri den/Valid Thru                          MSSV/ID no           |
+|   30/07/2024                                       20205165            |
+**************************************************************************
+ ~/C/week4/hw  gcc -o hw2 hw2.c
+gcc -o hw2 hw2.c
+hw2.c: In function ‘main’:
+hw2.c:15:11: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
+   15 |   scanf("%d",mssv);
+      |          ~^  ~~~~
+      |           |  |
+      |           |  int
+      |           int *
+ ~/C/week4/hw  gcc -o hw2 hw2.c
+gcc -o hw2 hw2.c
+ ~/C/week4/hw  ./hw2
+./hw2
+Nhap vao ten truong cua ban (VietNamese): TRUONG DAI HOC BACH KHOA HA NOI
+TRUONG DAI HOC BACH KHOA HA NOI
+Nhap vao ten truong cua ban (English): HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY
+HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY
+Ho va ten cua ban: Nguyen Hop Phu
+Nguyen Hop Phu
+Ma so sinh vien: 20205165
+20205165
+Ngay sinh cua ban (dd/mm/yy): 24/01/2002
+24/01/2002
+Ban la sinh vien khoa (66,65,64...): 65
+65
+ Chuyen nganh (IT-E7,IT1,IT2,..): IT-E7
+IT-E7
+ Lop sinh vien (Vd: ICT 2): ICT 02
+ICT 02
+Gia tri su dung den (dd/mm/yy): 30/07/2024
+30/07/2024
+**************************************************************************
+|                                                                        |
+|         TRUONG DAI HOC BACH KHOA HA NOI           THE SINH VIEN        |
+|   HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY    STUDENT ID CARD       |
+|                                                                        |
+|   __________________________________________________________________   |
+|   Ho ten/ Name                                                         |
+|   Nguyen Hop Phu                                                       |
+|                                                                        |
+|   Ngay sinh/ Date of Birth                                             |
+|   24/01/2002                                                           |
+|                                                                        |
+|   ICT 02-K65 (IT-E7)                                                    |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   Gia tri den/Valid Thru                          MSSV/ID no           |
+|   30/07/2024                                       20205165            |
+**************************************************************************
+ ~/C/week4/hw  gcc -o hw2 hw2.c
+gcc -o hw2 hw2.c
+ ~/C/week4/hw  ./hw2
+./hw2
+Nhap vao ten truong cua ban (VietNamese): TRUONG DAI HOC BACH KHOA
+TRUONG DAI HOC BACH KHOA
+Nhap vao ten truong cua ban (English): HA NOI UNIVERSITY OF SCIENCE AND TECHNO
+HA NOI UNIVERSITY OF SCIENCE AND TECHNO
+Ho va ten cua ban: Nguyen Ngoc Dnag
+Nguyen Ngoc Dnag
+Ma so sinh vien: 20205165
+20205165
+Ngay sinh cua ban (dd/mm/yy): 24/1/2003
+24/1/2003
+Ban la sinh vien khoa (66,65,64...): 66
+66
+ Chuyen nganh (IT-E7,IT1,IT2,..): IT1
+IT1
+ Lop sinh vien (Vd: ICT 2): IT1 05
+IT1 05
+Gia tri su dung den (dd/mm/yy): 30/7/2024
+30/7/2024
+**************************************************************************
+|                                                                        |
+|                TRUONG DAI HOC BACH KHOA           THE SINH VIEN        |
+|       HA NOI UNIVERSITY OF SCIENCE AND TECHNO    STUDENT ID CARD       |
+|                                                                        |
+|   __________________________________________________________________   |
+|   Ho ten/ Name                                                         |
+|   Nguyen Ngoc Dnag                                                       |
+|                                                                        |
+|   Ngay sinh/ Date of Birth                                             |
+|   24/01/2003                                                           |
+|                                                                        |
+|   IT1 05-K66 (IT1)                                                  |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   Gia tri den/Valid Thru                          MSSV/ID no           |
+|   30/07/2024                                       20205165            |
+**************************************************************************
+ ~/C/week4/hw  gcc -o hw2 hw2.c
+gcc -o hw2 hw2.c
+ ~/C/week4/hw  ./hw2
+./hw2
+Nhap vao ten truong cua ban (VietNamese): TRUONG DAI HOC BACH KHOAA
+TRUONG DAI HOC BACH KHOAA
+Nhap vao ten truong cua ban (English): HA NOI UNIVERSITY OF SCIENCE AND TECH
+HA NOI UNIVERSITY OF SCIENCE AND TECH
+Ho va ten cua ban: Nguyen Ngoc Dang
+Nguyen Ngoc Dang
+Ma so sinh vien: 20205165
+20205165
+Ngay sinh cua ban (dd/mm/yy): 24/1/2002
+24/1/2002
+Ban la sinh vien khoa (66,65,64...): 65
+65
+ Chuyen nganh (IT-E7,IT1,IT2,..): IT2
+IT2
+ Lop sinh vien (Vd: ICT 2): IT2 06
+IT2 06
+Gia tri su dung den (dd/mm/yy): 30/7/2024
+30/7/2024
+**************************************************************************
+|                                                                        |
+|               TRUONG DAI HOC BACH KHOAA           THE SINH VIEN        |
+|         HA NOI UNIVERSITY OF SCIENCE AND TECH    STUDENT ID CARD       |
+|                                                                        |
+|   __________________________________________________________________   |
+|   Ho ten/ Name                                                         |
+|           Nguyen Ngoc Dang                                       |
+|                                                                        |
+|   Ngay sinh/ Date of Birth                                             |
+|   24/01/2002                                                           |
+|                                                                        |
+|   IT2 06-K65 (       IT2)                                        |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   Gia tri den/Valid Thru                          MSSV/ID no           |
+|   30/07/2024                                       20205165            |
+**************************************************************************
+ ~/C/week4/hw  gcc -o hw2 hw2.c
+gcc -o hw2 hw2.c
+ ~/C/week4/hw  ./hw2
+./hw2
+Nhap vao ten truong cua ban (VietNamese): TRUONG DAI HOC BACH KHOA HA NOI
+TRUONG DAI HOC BACH KHOA HA NOI
+Nhap vao ten truong cua ban (English): HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY
+HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY
+Ho va ten cua ban: Nguyen Hop Phu
+Nguyen Hop Phu
+Ma so sinh vien: 20205165
+20205165
+Ngay sinh cua ban (dd/mm/yy): 24/1/2222
+24/1/2222
+Ban la sinh vien khoa (66,65,64...): 64
+64
+ Chuyen nganh (IT-E7,IT1,IT2,..): IT-E6
+IT-E6
+ Lop sinh vien (Vd: ICT 2): VN 05
+VN 05
+Gia tri su dung den (dd/mm/yy): 30/8/2022
+30/8/2022
+**************************************************************************
+|                                                                        |
+|         TRUONG DAI HOC BACH KHOA HA NOI           THE SINH VIEN        |
+|   HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY    STUDENT ID CARD       |
+|                                                                        |
+|   __________________________________________________________________   |
+|   Ho ten/ Name                                                         |
+|   Nguyen Hop Phu                                                       |
+|                                                                        |
+|   Ngay sinh/ Date of Birth                                             |
+|   24/01/2222                                                           |
+|                                                                        |
+|   VN 05-K64 (IT-E6)                                               |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   Gia tri den/Valid Thru                          MSSV/ID no           |
+|   30/08/2022                                       20205165            |
+**************************************************************************
+ ~/C/week4/hw  gcc -o hw2 hw2.c
+gcc -o hw2 hw2.c
+ ~/C/week4/hw  ./hw2
+./hw2
+Nhap vao ten truong cua ban (VietNamese): TRUONG DAI HOC BACH KHOA HA NOI
+TRUONG DAI HOC BACH KHOA HA NOI
+Nhap vao ten truong cua ban (English): HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY
+HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY
+Ho va ten cua ban: NGUYEN NGOC HAI DANG
+NGUYEN NGOC HAI DANG
+Ma so sinh vien: 20205165
+20205165
+Ngay sinh cua ban (dd/mm/yy): 24/1/2002
+24/1/2002
+Ban la sinh vien khoa (66,65,64...): 65
+65
+ Chuyen nganh (IT-E7,IT1,IT2,..): IT-E7
+IT-E7
+ Lop sinh vien (Vd: ICT 2): ICT 01
+ICT 01
+Gia tri su dung den (dd/mm/yy): 30/1/1111
+30/1/1111
+**************************************************************************
+|                                                                        |
+|         TRUONG DAI HOC BACH KHOA HA NOI           THE SINH VIEN        |
+|   HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY    STUDENT ID CARD       |
+|                                                                        |
+|   __________________________________________________________________   |
+|   Ho ten/ Name                                                         |
+|   NGUYEN NGOC HAI DANG                                                 |
+|                                                                        |
+|   Ngay sinh/ Date of Birth                                             |
+|   24/01/2002                                                           |
+|                                                                        |
+|   ICT 01-K65 (IT-E7) |   || | ||||| ||| ||||| ||||||||                                        |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   Gia tri den/Valid Thru                          MSSV/ID no           |
+|   30/01/1111                                       20205165            |
+**************************************************************************
+ ~/C/week4/hw  gcc -o hw2 hw2.c
+gcc -o hw2 hw2.c
+ ~/C/week4/hw  ./hw2
+./hw2
+Nhap vao ten truong cua ban (VietNamese): TRUONG DAI HOC BACH KHOA HA NOI
+TRUONG DAI HOC BACH KHOA HA NOI
+Nhap vao ten truong cua ban (English): HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY
+HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY
+Ho va ten cua ban: NGUYEN HOP PHU
+NGUYEN HOP PHU
+Ma so sinh vien: 20205165
+20205165
+Ngay sinh cua ban (dd/mm/yy): 20/11/1111
+20/11/1111
+Ban la sinh vien khoa (66,65,64...): 65
+65
+ Chuyen nganh (IT-E7,IT1,IT2,..): IT-E7
+IT-E7
+ Lop sinh vien (Vd: ICT 2): ICT 02
+ICT 02
+Gia tri su dung den (dd/mm/yy): 30/12/1111
+30/12/1111
+**************************************************************************
+|                                                                        |
+|         TRUONG DAI HOC BACH KHOA HA NOI           THE SINH VIEN        |
+|   HA NOI UNIVERSITY OF SCIENCE AND TECHNOLOGY    STUDENT ID CARD       |
+|                                                                        |
+|   __________________________________________________________________   |
+|   Ho ten/ Name                                                         |
+|   NGUYEN HOP PHU                                                       |
+|                                                                        |
+|   Ngay sinh/ Date of Birth                                             |
+|   20/11/1111                                                           |
+|                                                                        |
+|   ICT 02-K65 (IT-E7) 
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   || | ||||| ||| ||||| ||||||||                                        |
+|   Gia tri den/Valid Thru                          MSSV/ID no           |
+|   30/12/1111                                       20205165            |
+**************************************************************************
+ ~/C/week4/hw  

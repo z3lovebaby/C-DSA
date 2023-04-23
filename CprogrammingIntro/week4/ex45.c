@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define PI 3.14
+int main(){
+  double r,A,C,V,S;
+  printf("Nhap vao ban kinh: ");
+  scanf("%lf%*c",&r);
+  A=PI*r*r;
+  C=2*PI*r;
+  S=4*PI*r;
+  V=4.0/3 * PI * r*r*r;
+  printf(" Area: %.2f \t Circumference: %.2f \n Sxq: %.2f\t Volume: %.2f\n",A,C,S,V);
+  return 0;
+
+
+}

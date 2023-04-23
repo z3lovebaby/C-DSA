@@ -1,0 +1,192 @@
+#include<stdio.h>
+#define maxSize 40
+void status(int sttpcARR[]){
+        int i;
+        for (i=0;i<(maxSize/10);i++){
+            for (int j=1;j<=10;j++){
+                printf("May %d\t",10*i+j); 
+            }
+            printf("\n");
+            for (int j=1;j<=10;j++){
+                if (sttpcARR[10*i+j-1]){printf(" OFF\t");}
+                else printf(" ON\t"); 
+            }
+            printf("\n\n");
+            
+        }
+    }
+void status2(int sttpcARR[],int Wpc[]){
+        int i;
+        for (i=0;i<(maxSize/10);i++){
+            for (int j=1;j<=10;j++){
+                printf("May %d\t",10*i+j); 
+            }
+            printf("\n");
+            for (int j=1;j<=10;j++){
+                if (sttpcARR[10*i+j-1]){printf(" OFF\t");}
+                else printf(" ON\t"); 
+            }
+            printf("\n");
+            for (int j=1;j<=10;j++){
+                printf(" W:%d\t",Wpc[10*i+j-1]);
+            }
+            printf("\n\n");
+
+            
+        }
+    }
+int maxAB(int a,int b){
+    if (a>b) return a;
+    else return b;
+}
+int minAB(int a,int b){
+    if(b<a) return b;
+    else return a;
+}
+int main(){
+  int ch,i,Y_N,removecheck,back,max,min;
+    long int sum;
+    int sttpcARR[maxSize],Wpc[maxSize],count[maxSize];
+    ////////////
+    int aNum, sum1 = 0;
+    for (i=0;i<maxSize;i++){
+       Wpc[i]=count[i]=0;
+       sttpcARR[i]=1;
+    }
+    do{
+        printf("\t\tQUAN LY PHONG MAY !\n");
+        printf("\t\t1. Dung may/Chon may cho sv\n");
+        printf("\t\t2. Trang thai cac may/Tat may\n");
+        printf("\t\t3. Chi tiet dien nang tieu thu cac may\n");
+        printf("\t\t4. Tong dien nang - Tien dien\n");
+        printf("\t\t5. Thong ke !\n");
+        printf("\t\t6. Thoat !\n");
+        printf("\t\t****************************\n");
+        printf("\t\t Lua chon chuc nang: ");
+        scanf("%d%*c",&ch);
+        switch (ch){
+            case 1:
+                do{
+                
+                    do {
+                        printf("Nhap vao may ban muon chon:(1-40): ");
+                        scanf("%d%*c",&i);
+                        if (i<1||i>40) printf("May ban chon khong ton tai.\n");
+                    }while (i<1||i>40);
+                    i--;
+                    back=sttpcARR[i];
+                    if (sttpcARR[i])
+                    {
+                        printf("May %d dang ranh roi!\nChon thanh cong may %d.\n",i+1,i+1);
+                        back=sttpcARR[i]=0;
+                        Wpc[i]+=400;
+                        count[i]++;
+                    }else {
+                        do{
+                        printf("Nhap sai HOAC may dang duoc nguoi khac su dung !\n Vui long chon lai may khac!\n");
+                        printf("1.Tiep tuc nhap lai !\n2. Xem trang thai cac may roi nhap lai.\nLua chon: ");
+                        scanf("%d%*c",&Y_N);
+                        if (Y_N==1){
+                            back=!sttpcARR[i];
+                        }
+                        else if (Y_N==2){
+                             status(sttpcARR);
+                            back=!sttpcARR[i];
+                        }
+                        else printf("Nhap khong hop le.\n"); 
+                        }while (Y_N!=1 && Y_N!=2);
+                        
+                    }
+                }while (back);
+                printf("\n\nThanh cong.\nPress ENTER to Continue. ");
+                while( getchar() != '\n' );
+                break;
+            case 2:
+                status(sttpcARR);
+                printf("\n\nThanh cong.\nPress ENTER to Continue.\n ");
+                while( getchar() != '\n' );
+                
+                do{
+                    printf("1. Tat may nao do.\n2. Back to Menu.\nLua chon: ");
+                    scanf("%d%*c",&removecheck);
+                    if (removecheck!=1&&removecheck!=2) printf("Lua chon khong hop le.\nChon lai.\n");
+                }while (removecheck!=1&&removecheck!=2);
+
+                if (removecheck==1){
+                    printf("Nhap vao may muon tat cho den khi NHAP -1\nSo may hop le (1-%d)\n",maxSize);
+                    while (1){
+                        printf("May: ");
+                        scanf("%d%*c",&i);
+                        if (i==-1) {
+                            printf("\n\n\nPress ENTER to return Menu.\n ");
+                            while( getchar() != '\n' );
+                            break;
+                        }
+                        else if (i<1||i>maxSize){
+                            printf("May khong ton tai.Nhap lai\n");
+                        }else{
+                            if (!sttpcARR[i-1]){
+                                printf("Tat may %d thanh cong !\n",i);
+                                sttpcARR[i-1]=1;
+                            }else{
+                                printf("Khong hop le.May %d dang tat.\n",i);
+                            }
+                        }
+                    }
+                }else{
+                    printf("\n\n\nPress ENTER to return Menu.\n ");
+                    while( getchar() != '\n' );
+                    break;
+                }
+                break;
+            case 3:
+                status2(sttpcARR,Wpc);
+                printf("\n\nThanh cong.\nPress ENTER to Continue. ");
+                while( getchar() != '\n' );
+                break;
+            case 4:
+            sum=0;
+            for (i=0;i<maxSize;i++){
+                sum+=Wpc[i];
+            }
+            printf("Tong dien nang tieu thu: %ld\n",sum);
+            printf("Tien dien tam tinh: %ld x 750 = %ld (VND)\n",sum,sum*750);
+                printf("\n\nThanh cong.\nPress ENTER to Continue. ");
+                while( getchar() != '\n' );
+                break;
+            case 5:
+                max=count[0];
+                min=count[0];
+                for (i=1;i<maxSize;i++){
+                    max=maxAB(max,count[i]);
+                    min=minAB(min,count[i]);
+                }
+                printf("May duoc su dung nhieu nhat:(%d lan): ",max);
+                for (i=0;i<maxSize;i++){
+                    if (count[i]==max){
+                        printf("%d ",i+1);
+                    }
+                }
+                printf("\n");
+                printf("May duoc su dung nhieu nhat:(%d lan): ",min);
+                for (i=0;i<maxSize;i++){
+                    if (count[i]==min){
+                        printf("%d ",i+1);
+                    }
+                }
+                printf("\n");
+                printf("\n\nThanh cong.\nPress ENTER to Continue ");
+                while( getchar() != '\n' );
+                break;
+            case 6:
+                printf("Cam on !!\n");
+                break;
+            default: 
+                printf("Lua chon khong hop le !\nNhap lai !!!!\n");
+                printf("Press ENTER to Continue ");
+                while( getchar() != '\n' );
+                break;
+        }
+    }while (ch!=6);
+    return 0;
+}

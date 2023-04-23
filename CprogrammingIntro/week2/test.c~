@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+  int _phu;
+  scanf("%d",&_phu);
+  printf("value = %d ",_phu);
+  return 0;
+
+}

@@ -1,0 +1,6 @@
+
+  }while (mark>=0);
+    printf("Tong thi sinh da nhap: %d\nAvr = %.2f\n",count,sum*1.0/count);
+
+  return 0;
+}
