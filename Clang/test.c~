@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main(){
+  int _ab;
+  _ab=5;
+  printf("_ab=%d\n",_ab);
+  return 0;
+}

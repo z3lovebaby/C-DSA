@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+  int n=0,num;
+  double y=0;
+  printf("Nhap vao num( cang lon ket qua PI cang chinh xac: ");
+  scanf("%d",&num);
+  while (n<num){
+    if (n % 2 ==0)
+      {
+	y=y+1.0/(2*n+1);
+      }else
+      {
+	y=y-1.0/(2*n+1);
+      }
+    n=n+1;
+  }
+  printf("PI= %.4f\n",4*y);
+  return 0;
+
+}

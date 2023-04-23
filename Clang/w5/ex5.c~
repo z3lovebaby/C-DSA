@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+  double a,b,y,x;
+  printf("Nhap vao 2 so a,b bat ki (a b):");
+  scanf("%lf %lf",&a,&b);
+  if (a<b)
+    {
+      x=1.0/3 * (a+b) +b;
+    }else if (a=b)
+    {
+      x=15.172;
+    }else
+    {
+      x=1.0*(a-b)/(a*a+b*b);
+    }
+  y=15*x*x+x+12;
+  printf("Gia tri cua y: %.2f\n");
+
+  return 0;
+}

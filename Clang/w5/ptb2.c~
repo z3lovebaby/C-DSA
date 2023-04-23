@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+  double a,b,c,del;
+  printf("Nhap vao a,b,c la he so cua ptrinh ax^2+bx+c=0\n");
+  scanf("%lf %lf %lf",&a,&b,&c);
+  del=b*b-4*a*c;
+  if (del<0)
+    {
+      printf("Ptrinh vo nghiem\n");
+    }else if (del==0)
+    {
+      printf("Ptrinh co nghiem kep x1=x2=%.2f\n",(-b/(2*a)));
+    }else
+    {
+      printf("Ptrinh co 2 nghiem pb.\n");
+      printf("x1 = %.2f\n",(-b-sqrt(del))/(2*a));
+      printf("x2 = %.2f\n",(-b+sqrt(del))/(2*a));
+    }
+  //gcc -o f f.c -lm
+  return 0;
+}
